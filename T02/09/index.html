@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con vh, vw y %</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Ejercicio: Unidades vh, vw y %</h1>
+    <div class="vh-box">Bloque con vh y vw</div>
+    <div class="vw-box">Bloque con %</div>
+    <div class="percent-box">Bloque con % dentro de contenedor</div>
+</body>
+
+</html>
+<style>
+    /* CSS Básico para Todos los Bloques */
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .vh-box,
+    .vw-box,
+    .percent-box {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        margin: 10px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Bloque con vh y vw */
+    .vh-box {
+        background-color: #3498db;
+        /* Azul */
+        width: 50vw;
+        /* Completa con 50vw para que ocupe el 50% del ancho del viewport */
+        height: 30vh;
+        /* Completa con 30vh para que ocupe el 30% de la altura del viewport */
+    }
+
+    /* Bloque con % */
+    .vw-box {
+        background-color: #2ecc71;
+        /* Verde */
+        width: 80%;
+        /* Completa con 80% para que ocupe el 80% del ancho del contenedor */
+        height: 200px;
+        /* Completa con 200px para una altura fija */
+    }
+
+    /* Bloque con % y max-width */
+    .percent-box {
+        background-color: #e74c3c;
+        /* Rojo */
+        width: 60%;
+        /* Completa con 60% para que ocupe el 60% del ancho del contenedor */
+        height: 200px;
+        /* Completa con 200px para una altura fija */
+        max-width: 500px;
+        /* Completa con 500px para limitar el ancho máximo */
+    }
+</style>
+
+
+<!--
+1. ¿Cómo afecta cada unidad al diseño cuando cambia el tamaño de ventana?
+    Se ajustan al tamaño de la ventana, tanto al alto como al ancho del viewport mientras que %
+    solo se ajusta al tamaño del contenedor del elemento
+2. ¿Qué diferencias observas entre el comportamiento del .vh-box y el .vw-box
+    vh se adapta al tamaño de la ventana y de altura. Vw su ancho depende del contenedor y la altura está fija en píxeles
+3. ¿Cómo limita el tamaño del bloque .percent-box la propiedad max-width?
+    max-width pone un límite al porcentaje del tamaño
+
+-->

@@ -1,0 +1,29 @@
+/*
+1. Selector de Elemento: Cambia el color del texto de todos los párrafos a azul
+2. Selector de Clase: Agrega un fondo amarillo al párrafo con la clase importante
+3. Selector de ID: Cambia el color del texto y el tamaño de fuente del título con id="titulo"
+4. Selector Uinversal: Elimina los márgenes y el relleno de todos los elementos
+5. Selector de Atributo: Aplicado un  borde rojo al campo de entrada de texto (input) que tenga type="text"
+*/
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+p {
+    color: blue;
+}
+
+#titulo {
+    color: green;
+}
+
+.importante {
+    background-color: yellow;
+}
+
+[type="text"] {
+    border: 2px solid red;
+}
