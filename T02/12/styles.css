@@ -1,0 +1,64 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* 1. Estilo para el título principal (h1) */
+h1 {
+    color: #333333;
+    /* Cambia el color del título */
+    font-size: 32px;
+    /* Define el tamaño del título en píxeles */
+    text-align: center;
+    /* Centra el título */
+    text-transform: uppercase;
+    /* Aplica mayúsculas al texto del título */
+}
+
+/* 2. Estilo para el subtítulo (h2) */
+h2 {
+    font-size: 18px;
+    /* Reduce el tamaño en comparación con el h1 */
+    color: #007acc;
+    /* Cambia el color del subtítulo */
+    letter-spacing: justify;
+    /* Ajusta el espaciado entre letras */
+    text-decoration: underline;
+    /* Añade una línea inferior, superior o de otro tipo */
+}
+
+/* 3. Estilo para el párrafo (p) */
+p {
+    font-size: 14px;
+    /* Aplica un tamaño de fuente cómodo para leer */
+    color: #333333;
+    /* Cambia el color del texto */
+    text-align: left;
+    /* Justifica el texto para mejorar su presentación */
+    text-indent: 30px;
+    /* Indenta la primera línea del párrafo */
+}
+
+/* 4. Estilo para el bloque de cita (blockquote) */
+blockquote {
+    font-style: italic;
+    /* Aplica estilo en cursiva */
+    color: #333333;
+    /* Cambia el color del bloque de cita */
+    background-color: rgb(255, 217, 147);
+    /* Usa un color de fondo suave para resaltarlo */
+    padding: 10px;
+    /* Añade espacio alrededor del texto */
+    border-left: 3px solid rgb(255, 156, 110);
+    /* Añade una línea de color a la izquierda para destacar */
+}
+
+
+/*
+    1. ¿Cómo cambia la apariencia del texto cuando aplicas diferentes colores y tamaños?
+        Se deforma y resulta más difícil de leer
+
+    2. ¿Qué combinación de propiedades y colores te parece más profesional o atractiva?
+        Colores poco saturados para destacar los textos y textos con colores oscuros y saturados para aumentar la legibilidad
+*/

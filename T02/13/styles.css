@@ -1,0 +1,75 @@
+/* CSS Básico */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 1. Estilo para el título principal (h1) */
+h1 {
+    font-family: 'sans-serif', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS';
+    /* Define una familia de fuente específica (por ejemplo, serif) */
+    font-size: 32px;
+    /* Ajusta el tamaño del título */
+    font-weight: bold;
+    /* Aplica un peso de fuente (bold, normal, etc.) */
+    text-transform: capitalize;
+    /* Aplica mayúsculas o capitalización */
+}
+
+/* 2. Estilo para el primer párrafo (p.parrafo1) */
+.parrafo1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Prueba una fuente sans-serif (como Verdana o Arial) */
+    font-size: 18px;
+    /* Define un tamaño de fuente adecuado para el párrafo */
+    font-weight: lighter;
+    /* Usa un peso de fuente ligero o regular */
+}
+
+/* 3. Estilo para el segundo párrafo (p.parrafo2) */
+.parrafo2 {
+    font-size: 14px;
+    /* Aplica un tamaño de fuente más grande o pequeño para experimentar */
+    font-style: italic;
+    /* Usa un estilo de fuente en cursiva */
+    text-transform: capitalize;
+    /* Prueba con mayúsculas, minúsculas o capitalización */
+    letter-spacing: 2px;
+    /* Ajusta el espacio entre letras */
+}
+
+/* 4. Estilo para el tercer párrafo (p.parrafo3) con Google Fonts */
+/* Importa una fuente desde Google Fonts antes de comenzar el archivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.parrafo3 {
+    font-family: 'Roboto', sans-serif;
+    /* Aplica la fuente importada */
+    font-size: 16px;
+    /* Define un tamaño de fuente cómodo para leer */
+    font-weight: lighter;
+    /* Usa un peso más ligero o más grueso para el estilo */
+    line-height: 1.5;
+    /* Ajusta el interlineado para facilitar la lectura */
+}
+
+/*Completa los valores de cada propiedad en el archivo CSS:
+font-family: Usa familias de fuente estándar como serif o sans-serif para el título y primer párrafo, y aplica la fuente
+importada (Roboto) en el último párrafo.
+font-size: Prueba tamaños en píxeles o em (por ejemplo, 24px para el título y 16px para los párrafos).
+font-weight: Aplica valores como bold, normal, o numéricos como 300 o 700.
+text-transform: Usa valores como uppercase, lowercase, o capitalize para cambiar la apariencia del texto.
+letter-spacing: Ajusta el espacio entre letras en el segundo párrafo con valores como 1px o 2px.
+line-height: Define una altura de línea como 1.5 o 1.8 en el último párrafo para mejorar la legibilidad.
+Responde:
+¿Qué diferencias notas en la legibilidad entre las fuentes serif y sans-serif?
+    Las serif no tienen serifas por lo que son más simples y fáciles de leer pero es cierto que ( p b d ) según varios estudios a la larga pueden llegar
+    a confundiar al leer a personas mayores ya que las letras son exactamente iguales pero espejadas o invertidas. Las sans-serif no tienen este problema pero pueden
+    llegar a cansar la vista más si la lectura es muy seguida y prolongada.
+
+¿Cómo afecta el tamaño de la fuente y el interlineado a la comodidad de lectura?
+    A mayor tamaño más legibilidad (hasta cierto punto claro). El interlineado ayuda a asociar un párrafo con otro, ya que bloques de texto juntos se tienden a asociar a la misma información
+
+¿Cuál es tu combinación de propiedades favorita para títulos y párrafos?
+    font-size, font-weight y line-height. A veces la simpleza mejora la lectura más que recargarlo de elementos
+*/
