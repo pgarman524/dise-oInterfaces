@@ -1,0 +1,16 @@
+.uno {
+    margin: 20px;
+    background-color: wheat;
+}
+
+.dos {
+    margin: 10px 20px 30px 40px;
+    background-color: pink;
+
+}
+
+.tres {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+}

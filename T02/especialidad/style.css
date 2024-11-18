@@ -1,0 +1,30 @@
+h1 {
+    color: red;
+}
+
+.titulo {
+    color: blue;
+}
+
+#parrafo {
+    color: green;
+}
+
+.texto {
+    color: grey !important;
+}
+
+p {
+    color: goldenrod;
+}
+
+/*
+    1.¿Qué color se aplica finalmente al encabezado h1?
+        Finalmente ganó el estilo en línea ya que es más directo que el de css.
+
+    2.¿Cuál es el color del párrafo con el ID parrafo?
+        La id gana al genérico de igual forma que el anterior.
+
+    3.¿Qué color tiene el párrafo con la clase texto dentro del div contenedor?
+        Ha obtenido el gris ya que tenemos la cláusula !important y este sobreescribe absolutamente cualquier cosa, ya sea clase, genérico o  id.
+*/

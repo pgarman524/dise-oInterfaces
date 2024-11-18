@@ -1,0 +1,27 @@
+.primero {
+    border: dotted 3px;
+    margin: 20px;
+    padding: 10px;
+    border-color: blue;
+}
+
+.segundo {
+    border: solid;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border-color: green;
+    padding: 20px;
+
+}
+
+.tercero {
+    border: double;
+    border-color: red;
+    border-width: 4 px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+

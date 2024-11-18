@@ -1,0 +1,29 @@
+.uno {
+    padding: 20px;
+    background-color: wheat;
+}
+
+.dos {
+    padding: 10px 15px 20px 25px;
+    background-color: pink;
+}
+
+.tres {
+    padding: 30px 50px 30px 50px;
+}
+
+button {
+    border: none;
+    background-color: goldenrod;
+    color: rgb(37, 3, 3);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 25px;
+    font-style: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: rgb(124, 103, 35);
+    color: whitesmoke;
+}

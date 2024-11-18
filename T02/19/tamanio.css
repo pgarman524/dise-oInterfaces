@@ -1,0 +1,27 @@
+.uno {
+    height: 150px;
+    width: 200px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dos {
+    width: 50%;
+    height: 100px;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tres {
+    width: 300px;
+    min-height: 100px;
+    max-height: 200px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
