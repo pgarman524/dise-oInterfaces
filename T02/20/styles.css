@@ -1,0 +1,14 @@
+#texto {
+    background-color: bisque;
+    width: 300px;
+    height: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+/*
+anchura: 300 + 30 + 100= 430px anchura
+
+altura: 300 + 30+ 100px = 430px altura
+*/
