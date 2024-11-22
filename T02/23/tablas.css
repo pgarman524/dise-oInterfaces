@@ -1,0 +1,26 @@
+caption {
+    caption-side: top;
+    background-color: orange;
+}
+
+.table {
+    border-spacing: 2px;
+    border-collapse: separate;
+    margin: 3%;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    border: 1px solid #000;
+    padding: 8px;
+    width: 1%;
+}
+
+.empty-cells {
+    background-color: #f0f0f0;
+}
+
+#row{
+    background-color: pink;
+}
