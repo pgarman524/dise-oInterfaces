@@ -1,0 +1,21 @@
+.container {
+    width: 300px;
+    height: 100px;
+    margin: 20px auto;
+}
+
+#cont1 {
+    overflow: auto;
+}
+
+#cont2 {
+    overflow: hidden;
+}
+
+#cont3 {
+    overflow: scroll;
+}
+
+#cont4 {
+    overflow: visible;
+}

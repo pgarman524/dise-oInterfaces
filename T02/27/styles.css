@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    background-color: antiquewhite;
+    width: 400px;
+    height: 400px;
+    float: inline-start;
+}
+
+#footer {
+    text-align: center;
+    background-color: aliceblue;
+    width: 90%;
+    height: 200px;
+    clear: both;
+}
+
+#columnaExtra {
+    background-color: aquamarine;
+    float: right;
+    width: 400px;
+}
+
+
+/*
+    - Si no se usa clear, entonces el footer se coloca también al lado de los demás div
+    - Otro float que sobreescriba la dirección a tomar
+*/
