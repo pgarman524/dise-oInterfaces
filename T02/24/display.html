@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Visibilidad de Elementos</title>
     <link rel="stylesheet" href="display.css">
 </head>
 
 <body>
+    <h1>Propiedad display</h1>
 
+    <div class="block-element">Elemento block</div>
+    <span class="inline-element">Elemento inline</span>
+    <span class="inline-block-element">Elemento inline-block</span>
+    <div class="hidden-element">Elemento oculto</div>
+
+    <button onclick="toggleVisibility()">Mostrar/Ocultar Elemento Oculto</button>
+
+    <script>
+        function toggleVisibility() {
+            const hiddenElement = document.querySelector('.hidden-element');
+            hiddenElement.style.display = hiddenElement.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 
 </html>
