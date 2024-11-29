@@ -1,0 +1,42 @@
+#google {
+    margin: 1%;
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 4px 8px 4px 8px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+#google:link {
+    color: blue;
+}
+
+#google:visited {
+    margin: 1%;
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #425edd;
+    padding: 4px 8px 4px 8px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+#google:hover {
+    color: green;
+}
+
+
+#wikipedia:active {
+    background-color: yellow;
+}
+
+#wikipedia:focus {
+    background-color: aquamarine;
+}
