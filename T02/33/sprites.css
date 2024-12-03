@@ -1,0 +1,50 @@
+#save {
+    margin-left: 15px;
+    width: 94px;
+    height: 30px;
+    background: url(https://img.freepik.com/vector-gratis/coleccion-kits-interfaz-usuario-planos-dibujados-mano_23-2149202270.jpg?t=st=1733127488~exp=1733131088~hmac=e20fd40cc2949a259ffa532ce452c9f5ac439cb71c1b9fa0ef3aeed82e5bfd20&w=826);
+    background-position: -73px -297px;
+    float: left;
+    /* transition: filter 0.3s ease; */
+}
+
+#save:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+#cancel {
+    width: 94px;
+    height: 30px;
+    background: url(https://img.freepik.com/vector-gratis/coleccion-kits-interfaz-usuario-planos-dibujados-mano_23-2149202270.jpg?t=st=1733127488~exp=1733131088~hmac=e20fd40cc2949a259ffa532ce452c9f5ac439cb71c1b9fa0ef3aeed82e5bfd20&w=826);
+    background-position: -191px -297px;
+    float: left;
+    /* transition: filter 0.3s ease; */
+}
+
+#cancel:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+#delete {
+    width: 94px;
+    height: 30px;
+    background: url(https://img.freepik.com/vector-gratis/coleccion-kits-interfaz-usuario-planos-dibujados-mano_23-2149202270.jpg?t=st=1733127488~exp=1733131088~hmac=e20fd40cc2949a259ffa532ce452c9f5ac439cb71c1b9fa0ef3aeed82e5bfd20&w=826);
+    background-position: -307px -297px;
+    float: left;
+    /* transition: filter 0.3s ease; */
+}
+
+#delete:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+#window {
+    width: 325px;
+    height: 190px;
+    background: url(https://img.freepik.com/vector-gratis/coleccion-kits-interfaz-usuario-planos-dibujados-mano_23-2149202270.jpg?t=st=1733127488~exp=1733131088~hmac=e20fd40cc2949a259ffa532ce452c9f5ac439cb71c1b9fa0ef3aeed82e5bfd20&w=826);
+    background-position: 397px -67px;
+    clear: both;
+}

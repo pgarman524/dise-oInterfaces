@@ -1,0 +1,41 @@
+body{
+    color: rgb(41, 41, 41);
+}
+
+section p {
+    font-family: 'Verdana', sans-serif;
+}
+
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+
+}
+
+
+#override {
+    color: red;
+}
+
+
+h1.title {
+    color: inherit;
+    font-size: 2.5em;
+
+}
+
+
+footer p {
+    color: blue !important;
+}
+
+/*
+1. El navegador aplica las reglas en el orden en que aparecen, respetando la especificidad. La regla que aparece última prevalecerá, a menos que use !important
+
+2. El id #override tiene mayor especificidad, por lo que sobrescribirá cualquier estilo anterior
+
+3. Sin !important, la regla puede ser sobrescrita por otras más específicas o definidas más abajo en el CSS
+
+4. Se heredan automáticamente propiedades como color, fuente y tamaño de fuente. Otras propiedades, como fondo o márgenes, deben especificarse explícitamente
+*/

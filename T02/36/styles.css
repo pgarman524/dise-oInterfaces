@@ -1,0 +1,51 @@
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 30px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+
+.imagenes {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: auto;
+}
+
+.enlaces {
+    margin-right: 15px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+    }
+
+    .imagenes {
+        justify-content: center;
+    }
+
+    .imagenes img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .enlaces {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
