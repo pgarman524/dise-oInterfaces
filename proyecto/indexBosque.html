@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Bosque</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/v1_6372.png" id="img">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="indexBosque.html">El Bosque</a>
+
+                    <div class="dropdown">
+                        <a href="indexGrazalema.html">Grazalema</a>
+                        <a href="indexUbrique.html">Ubrique</a>
+                    </div>
+                </li>
+                <li><a href="#rutas">Rutas</a></li>
+                <li><a href="#lugares">Lugares</a></li>
+                <li><a href="#restaurantes">Restaurantes</a></li>
+            </ul>
+        </nav>
+        <!-- Interruptor de modo oscuro -->
+        <div class="dark-mode-switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <label for="dark-mode-toggle"></label>
+        </div>
+    </header>
+
+    <section class="section" id="rutas">
+        <h2>Rutas</h2>
+        <div class="carousel">
+            <div>
+                <img src="images/ruta1.jpg" alt="Ruta 1">
+                <p>Esta ruta recorre pueblos entre montes y valles.</p>
+            </div>
+            <div>
+                <img src="images/ruta2.jpg" alt="Ruta 2">
+                <p>Bonita ruta por el sendero del Río Majaceite.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="lugares">
+        <h2>Lugares</h2>
+        <div class="carousel">
+            <div>
+                <img src="images/museo.jpg" alt="Lugar 1">
+                <p>El Museo del Queso, centro de gran interés.</p>
+            </div>
+            <div>
+                <img src="images/molino.jpg" alt="Lugar 2">
+                <p>Puedes ver el Molino de Abajo, museo y más.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="restaurantes">
+        <h2>Restaurantes</h2>
+        <div class="carousel">
+            <div>
+                <img src="images/duende.jpg" alt="Restaurante 1">
+                <p> La Casa del Duende ...</p>
+            </div>
+            <div>
+                <img src="images/tabanco.jpg" alt="Restaurante 2">
+                <p>Meson tradicional, Mesón El Tabanco...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your website. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+                Service</a></p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        let darkModeStylesheet;
+
+        darkModeToggle.addEventListener('click', () => {
+            if (!darkModeStylesheet) {
+                // Cargar stylesDark.css si aún no está cargado
+                darkModeStylesheet = document.createElement('link');
+                darkModeStylesheet.rel = 'stylesheet';
+                darkModeStylesheet.href = 'css/styleDark.css';
+                document.head.appendChild(darkModeStylesheet);
+                darkModeToggle.textContent = 'Modo claro'; // Cambiar texto del botón
+            } else {
+                // Si ya está cargado, remover el modo oscuro
+                document.head.removeChild(darkModeStylesheet);
+                darkModeStylesheet = null;
+                darkModeToggle.textContent = 'Modo oscuro'; // Cambiar texto del botón
+            }
+        });
+    </script>
+</body>
+
+</html>
