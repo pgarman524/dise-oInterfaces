@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEOTOUR</title>
     <link rel="stylesheet" href="css/styles-index.css">
+    <style>
+        .audio-player {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,6 +29,7 @@
                 <li><a href="indexUbrique.html">Ubrique</a></li>
                 <li><a href="indexBosque.html">El Bosque</a></li>
                 <li><a href="indexGrazalema.html">Grazalema</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <!-- Interruptor de modo oscuro -->
@@ -36,19 +49,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <div class="contact-box">
-        <div class="contact-text">
-            <h2>Contacta con nosotros</h2>
-        </div>
-        <textarea class="contact-input" placeholder="Escribe tu mensaje aquí..."></textarea>
-    </div>
 
-    <footer>
-        <p>&copy; 2024 Your website. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </footer>
-
-    
     <script>
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         let darkModeStylesheet;

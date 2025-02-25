@@ -6,12 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubrique</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h2.popup-trigger {
+            cursor: pointer;
+        }
+
+        h2.popup-trigger:hover {
+            cursor: pointer;
+        }
+
+        .illustration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/ubrique_ilust.jpg') no-repeat center center;
+            background-size: cover;
+            filter: blur(10px);
+            opacity: 0;
+            transition: filter 0.5s, opacity 0.5s;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="images/v1_6372.png" id="img">
+            <a href="index.html"><img src="images/v1_6372.png" id="img"></a>
         </div>
         <nav>
             <ul>
@@ -29,7 +94,7 @@
         </nav>
         <!-- Interruptor de modo oscuro -->
         <div class="dark-mode-switch">
-            <input type="checkbox" id="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
             <label for="dark-mode-toggle"></label>
         </div>
     </header>
@@ -38,25 +103,26 @@
         <h2>Rutas</h2>
         <div class="carousel">
             <div>
-                <img src="images/ocuri.jpg" alt="Ruta 1">
-                <p>Las antiguas ruinas romanas de Ocuri.</p>
+                <img src="images/ocuri.jpg" alt="Ruta 1" onclick="playSound('cesped')">
+                <p>Ruinas romanas de Ocuri. </p>
             </div>
             <div>
-                <img src="images/v5_64.png" alt="Ruta 2">
+                <img src="images/v5_64.png" alt="Ruta 2" onclick="playSound('cesped')">
                 <p>Este sendero conecta Ubrique con...</p>
             </div>
         </div>
     </section>
 
     <section class="section" id="lugares">
-        <h2>Lugares</h2>
+        <h2 class="popup-trigger" onclick="showPopup('Lugares', 'https://www.youtube.com/embed/2xibibHPppM')">Lugares
+        </h2>
         <div class="carousel">
             <div>
-                <img src="images/museo.jpg" alt="Lugar 1">
+                <img src="images/museo.jpg" alt="Lugar 1" onclick="playSound('aves')">
                 <p>Antiguo convento de Capuchinos...</p>
             </div>
             <div>
-                <img src="images/v5_82.png" alt="Lugar 2">
+                <img src="images/v5_82.png" alt="Lugar 2" onclick="playSound('aves')">
                 <p>La ruta de los Miradores es un recorrido..</p>
             </div>
         </div>
@@ -66,11 +132,11 @@
         <h2>Restaurantes</h2>
         <div class="carousel">
             <div>
-                <img src="images/torreOro.jpg" alt="Restaurante 1">
+                <img src="images/torreOro.jpg" alt="Restaurante 1" onclick="playSound('kitchen')">
                 <p>Colocado en la calle principal de...</p>
             </div>
             <div>
-                <img src="images/meson.jpeg" alt="Restaurante 2">
+                <img src="images/meson.jpeg" alt="Restaurante 2" onclick="playSound('kitchen')">
                 <p>Situado en el Mojon de la vívora...</p>
             </div>
         </div>
@@ -81,12 +147,41 @@
                 Service</a></p>
     </footer>
 
+    <!-- Popup window -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <iframe id="popup-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            <p id="popup-text"></p>
+        </div>
+    </div>
+
+    <div class="illustration" id="illustration"></div>
+
+    <audio id="owl-sound" src="sounds/owl.mp3"></audio>
+    <audio id="rooster-sound" src="sounds/rooster.mp3"></audio>
+    <audio id="cesped-sound" src="sounds/cesped.mp3"></audio>
+    <audio id="aves-sound" src="sounds/aves.mp3"></audio>
+    <audio id="kitchen-sound" src="sounds/kitchen.mp3"></audio>
 
     <script>
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        let darkModeStylesheet;
+        let isOwlSound = true;
 
-        darkModeToggle.addEventListener('click', () => {
+        function showPopup(text, videoUrl) {
+            document.getElementById('popup-text').textContent = text;
+            document.getElementById('popup-video').src = videoUrl;
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popup-video').src = '';
+        }
+
+        function toggleDarkMode() {
+            playSound(isOwlSound ? 'owl' : 'rooster');
+            isOwlSound = !isOwlSound;
+
             if (!darkModeStylesheet) {
                 // Cargar stylesDark.css si aún no está cargado
                 darkModeStylesheet = document.createElement('link');
@@ -100,7 +195,35 @@
                 darkModeStylesheet = null;
                 darkModeToggle.textContent = 'Modo oscuro'; // Cambiar texto del botón
             }
+        }
+
+        function playSound(type) {
+            const soundMap = {
+                owl: 'owl-sound',
+                rooster: 'rooster-sound',
+                cesped: 'cesped-sound',
+                aves: 'aves-sound',
+                kitchen: 'kitchen-sound'
+            };
+            const soundId = soundMap[type];
+            if (soundId) {
+                const audio = document.getElementById(soundId);
+                audio.play();
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const illustration = document.getElementById('illustration');
+            const scrollY = window.scrollY;
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const opacity = Math.min(scrollY / maxScroll, 1);
+            const blur = Math.max(10 - (scrollY / maxScroll) * 10, 0);
+            illustration.style.opacity = opacity;
+            illustration.style.filter = `blur(${blur}px)`;
         });
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        let darkModeStylesheet;
     </script>
 </body>
 
